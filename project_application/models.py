@@ -15,11 +15,11 @@ class Business(models.Model):
     AVAILABLE_FORMS = (
         ('KP', 'Karta podarunkowa'),
         ('Z', 'Zniżka'),
-        ('ZAW', 'Zawieszony produkt (np.kawa)"'),
+        ('ZAW', 'Zawieszony produkt (np.kawa)'),
         ('I', 'Inna'),
     )
     form = models.CharField(max_length = 264, choices = AVAILABLE_FORMS)
-    url = models.URLField(unique=True)
+    url = models.URLField(max_length=200)
     city = models.CharField(max_length = 264)
     update_date = models.DateTimeField(auto_now=True)
 

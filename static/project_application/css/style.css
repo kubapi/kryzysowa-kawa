@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Cyrulik';
+  src: local('Cyrulik'),
+       url('../static/css/fonts/Cyrulik-Sharp.ttf') format("truetype");
+}
+
+h1 {
+  font-size: 62px;
+}
