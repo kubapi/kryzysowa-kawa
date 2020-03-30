@@ -8,36 +8,29 @@
     <!-- Style -->
     <link rel="stylesheet" href="{% static "project_application/css/style.css" %}">
 
+    <!-- jQuery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Zawieszona kawa</h1>
-    <div class="container-fluid">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            Utrzymaj z nami kontakt,
-            będziemy cię informować na bieżąco z naszymi działaniami.
-          </li>
-        </ul>
+    <div class="container">
+      <div class="brand">
+        <h1>Zawieszona kawa</h1>
+      </div>
+      <div class="hero_text">
+        <h2>Pomóżmy naszym ulubionym miejscom przetrwać...</h2>
+        <h2>...kupując w zawieszeniu!</h2>
+        <h3>Razem damy radę!</h3>
+      </div>
+    </div>
+    <div class="container">
+        {% block body_block %}
 
-        <div class="container">
-          {% block body_block %}
-
-          {% endblock %}
-        </div>
-
+        {% endblock %}
     </div>
 
-
+    <script src="{% static "project_application/scripts/styling_script.js"%}" charset="utf-8"></script>
   </body>
 </html>

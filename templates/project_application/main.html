@@ -3,4 +3,29 @@
   {% block body_block %}
   <!-- Insert here -->
 
+    {% if businesses %}
+    <table class="tabble">
+      <thead>
+      <tr>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Typ</th>
+        <th scope="col">Forma</th>
+        <th scope="col">Miasto</th>
+        <th scope="col">Data aktualizacji</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for business in businesses%}
+      <tr>
+        <td>{{business.name}}</td>
+        <td>{{business.type}}</td>
+        <td>{{business.form}}</td>
+        <td>{{business.city}}</td>
+        <td>{{business.update_date}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+
   {% endblock %}

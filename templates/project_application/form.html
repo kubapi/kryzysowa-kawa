@@ -1,1 +1,20 @@
 <!DOCTYPE html>
+{% extends "project_application/base.html" %}
+  {% block body_block %}
+  <!-- Insert here -->
+  <div class="conainter">
+    <div class="jumbotron">
+      <h1>Witaj!</h1>
+      <h2>Pozwól swoim klientom Cię wspomóc i wypełnij formularz!</h2>
+
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <input type="submit"  class="btn btn-primary" name="" value="Submit">
+      </form>
+
+    </div>
+
+  </div>
+  {% endblock %}
