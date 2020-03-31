@@ -4,7 +4,10 @@
 <!-- Insert here -->
 
 {% if businesses %}
-<table class="table" style="margin-top: 20vw;">
+<div class="container">
+</div>
+
+<table class="table" style="margin-top: 5vw;">
   <thead>
     <tr>
       <th scope="col">Nazwa</th>
@@ -17,7 +20,9 @@
   <tbody>
     {% for business in businesses%}
     <tr>
-      <td>{{business.name}}</td>
+      <a>
+        <td>{{business.name}}</td>
+      </a>
       <td>{{business.type}}</td>
       <td>{{business.form}}</td>
       <td>{{business.city}}</td>

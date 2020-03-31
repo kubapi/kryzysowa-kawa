@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'Cyrulik-Sharp';
-  src: local('Cyrulik-Sharp'),
-    url('../fonts/Cyrulik-Sharp.ttf') format("truetype");
-}
-
-/* Please ❤ this if you like it! */
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 /* #Primary
@@ -15,16 +8,6 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #212112;
-}
-
-::selection {
-  color: #fff;
-  background-color: #8167a9;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: #8167a9;
 }
 
 /* #Navigation
@@ -63,9 +46,12 @@ body {
 
 .navbar {
   padding: 0;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .navbar-brand img {
+  border-radius: 63px;
   height: 52px;
   width: auto;
   display: block;
@@ -182,21 +168,12 @@ body {
 }
 
 .full-height {
+  margin-top: 100px;
   height: 100vh;
 }
 
 .over-hide {
   overflow: hidden;
-}
-
-.absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  margin-top: 40px;
-  transform: translateY(-50%);
-  z-index: 20;
 }
 
 h1 {
@@ -607,7 +584,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 3px;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://ivang-design.com/ig-logo.jpg');
+  background-image: url('https://lh3.googleusercontent.com/proxy/oz7gnvnXkdog60g3kiXWoiPeODODHyzXw3u-QgNys5dh2I-LNqit9OMDqelrCyO-dcuzHfokH_1NrsYGkpjMdWZq28p3sFdPcr_uT32c-sHZzVOEpMyZAfJH9qB5UJ4BJhFBS3hB5sE');
   box-shadow: 0 0 0 2px rgba(12, 12, 12, .1);
   transition: opacity .2s, border-radius .2s, box-shadow .2s;
   transition-timing-function: ease-out;

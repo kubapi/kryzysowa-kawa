@@ -1,5 +1,7 @@
-/* Please ❤ this if you like it! */
-
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel();
+  console.log("Owl loaded!");
+});
 
 (function($) {
   "use strict";
@@ -15,11 +17,10 @@
       }
     });
   });
-
+  console.log("JS loaded!");
 
 
   //Menu On Hover
-
   $('body').on('mouseenter mouseleave', '.nav-item', function(e) {
     if ($(window).width() > 750) {
       var _d = $(e.target).closest('.nav-item');
