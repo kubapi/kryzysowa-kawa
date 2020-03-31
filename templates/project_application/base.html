@@ -1,42 +1,85 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="pl" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Zawieszona kawa</title>
+<html lang="pl">
 
-    <!-- Style -->
-    <link rel="stylesheet" href="{% static "project_application/css/style.css" %}?">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- jQuery CDN  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <title>Zawieszona kawa</title>
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="{% static "project_application/css/style.css" %}?">
+
+</head>
+
+<body>
+
+  <!-- Navigation starts -->
+  <div class="navigation-wrap bg-light start-header start-style">
     <div class="container">
-      <div class="brand">
-        <h1>Zawieszona kawaą</h1>
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand" href="{% url "main" %}" target="_blank">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto py-4 py-md-0">
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="{% url "main" %}">Strona główna</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="{% url "project_application:about" %}">O projekcie</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="{% url "project_application:form" %}">Zgłoś się</a>
+                </li>
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                  <a class="nav-link" href="{% url "project_application:contact" %}">Kontakt</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
-      <div class="hero_text">
-        <h2>Pomóżmy naszym ulubionym miejscom przetrwać...</h2>
-        <h2>...kupując w zawieszeniu!</h2>
-        <h3>Razem damy radę!</h3>
+    </div>
+  </div>
+  <!-- Navigation ends -->
+
+  <!-- Ceneter section starts -->
+  <div class="section full-height">
+    <div class="absolute-center">
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {% block body_block%}
+
+              {% endblock %}
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="{% url 'project_application:contact' %}">Kontakt</a>
-      <a href="{% url 'project_application:about' %}">O projekcie</a>
-      <a href="{% url 'project_application:form' %}">Zgłoś się</a>
-
-      <input type="email" method="post" placeholder="adres@email.pl" value="">
-      <input type="submit" name="" value="Zapisz się">
     </div>
-    <div class="container">
-        {% block body_block %}
+  </div>
 
-        {% endblock %}
-    </div>
+  <div class="my-5 py-5"></div>
+  <!-- Center section ends -->
 
-    <script src="{% static "project_application/scripts/styling_script.js"%}" charset="utf-8"></script>
-  </body>
+  <!-- Bottom-Right -->
+  <a href="https://themeforest.net/user/ig_design/portfolio" class="link-to-portfolio" target=”_blank”></a>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+  <script src="{% static "project_application/scripts/script.js" %}"></script>
+
+</body>
+
 </html>

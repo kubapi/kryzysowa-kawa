@@ -9,17 +9,17 @@ class Business(models.Model):
 
     name = models.CharField(max_length = 264, unique = True)
     AVAILABLE_TYPES = (
-        ('K', 'Kawiarnia'),
-        ('R', 'Restauracja'),
-        ('B', 'Bar'),
-        ('I', 'Inna'),
+        ('Kawiarnia', 'Kawiarnia'),
+        ('Restauracja', 'Restauracja'),
+        ('Bar', 'Bar'),
+        ('Inny', 'Inny'),
     )
     type = models.CharField(max_length = 264, choices = AVAILABLE_TYPES)
     AVAILABLE_FORMS = (
-        ('KP', 'Karta podarunkowa'),
-        ('Z', 'Zniżka'),
-        ('ZAW', 'Zawieszony produkt (np.kawa)'),
-        ('I', 'Inna'),
+        ('Karta podarunkowa', 'Karta podarunkowa'),
+        ('Zniżka', 'Zniżka'),
+        ('Zawieszony produkt', 'Zawieszony produkt (np.kawa)'),
+        ('Inna', 'Inna'),
     )
     form = models.CharField(max_length = 264, choices = AVAILABLE_FORMS)
     url = models.URLField(max_length=200)
