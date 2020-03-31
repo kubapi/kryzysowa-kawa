@@ -4,6 +4,9 @@ import datetime
 # Create your models here.
 class Business(models.Model):
     """docstring for Business."""
+    class Meta():
+        verbose_name_plural = "Businesses"
+
     name = models.CharField(max_length = 264, unique = True)
     AVAILABLE_TYPES = (
         ('K', 'Kawiarnia'),
@@ -29,6 +32,9 @@ class Business(models.Model):
 
 class NewsletterSubscriber(models.Model):
     """docstring for Newsletter."""
+    class Meta():
+        verbose_name_plural = "Newsletter Subscribers"
+
     email = models.EmailField(unique=True)
     name = models.CharField(max_length = 264)
     starting_date = models.DateTimeField(auto_now=True)
