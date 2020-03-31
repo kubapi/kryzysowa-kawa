@@ -27,3 +27,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'project_application/contact.html')
+
+def explore(request):
+    return render(request, 'project_application/explore.html')

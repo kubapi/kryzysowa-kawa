@@ -6,7 +6,8 @@ app_name = 'project_application'
 
 urlpatterns = [
     #name = '' is used for connecting with {% url %} in tamplates
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
-    path('form/', views.businesses, name='form')
+    path('o-nas/', views.about, name='about'),
+    path('kontakt/', views.contact, name='contact'),
+    path('zglos/', views.businesses, name='form'),
+    path('odkrywaj/', views.explore, name='explore'),
 ]
