@@ -3,6 +3,15 @@ $(document).ready(function() {
   console.log("Owl loaded!");
 });
 
+$(document).ready(function() {
+  $('#dtBasicExample').DataTable({
+    "paging": false, // false to disable pagination (or any other option)
+    "info": false,
+  });
+  $('.dataTables_length').addClass('bs-select');
+  console.log("DataTable initilaized!")
+});
+
 (function($) {
   "use strict";
   console.log("JS loaded!");

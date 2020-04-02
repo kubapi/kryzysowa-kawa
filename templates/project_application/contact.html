@@ -6,29 +6,32 @@
 {% block body_block %}
 <!-- Insert here -->
 {% load static %}
-<div class="contact">
-  <p>Skontaktuj się z nami w przypadku jakichkolwiek pytań lub wątpliwości. Czy masz firmę lub link, który możemy dodać? Wyślij do nas e-mail i daj nam znać.</p>
-</div>
-
-{% if news_form %}
-<div class="newsletter">
-  <p>Jeśli chcesz być nabieżąco ze statytstykami i naszymi działaniami zasubskyrbuj nasz newsletter!</p>
-
-  <form method="POST">
-    {% csrf_token %}
-    <div class="row">
-      <div class="col-6">
-        {{ news_form.email|as_crispy_field }}
-      </div>
-      <div class="col-6">
-        {{ news_form.name|as_crispy_field }}
-      </div>
+<div class="full-height">
+  <div class="container">
+    <div class="contact">
+      <p>Skontaktuj się z nami w przypadku jakichkolwiek pytań lub wątpliwości. Czy masz firmę lub link, który możemy dodać? Wyślij do nas e-mail i daj nam znać.</p>
     </div>
-    <div class="row">
-      <input type="submit" name="btn btn-success" value="Submit">
-    </div>
-  </form>
-</div>
-{% endif %}
 
+    {% if news_form %}
+    <div class="newsletter">
+      <p>Jeśli chcesz być nabieżąco ze statytstykami i naszymi działaniami zasubskyrbuj nasz newsletter!</p>
+
+      <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-6">
+            {{ news_form.email|as_crispy_field }}
+          </div>
+          <div class="col-6">
+            {{ news_form.name|as_crispy_field }}
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" name="btn btn-success" value="Submit">
+        </div>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
