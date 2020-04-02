@@ -34,7 +34,6 @@ body {
 .start-header {
   opacity: 1;
   transform: translateY(0);
-  padding: 10px 0;
   box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -71,7 +70,8 @@ body {
 
 .navbar-brand img {
   border-radius: 63px;
-  height: 52px;
+  height: 60px;
+  padding: 0 0 0 0 !important;
   width: auto;
   display: block;
   -webkit-transition: all 0.3s ease-out;
@@ -134,11 +134,7 @@ body {
 }
 
 .nav-item:hover .nav-link {
-  color: #8167a9 !important;
-}
-
-.nav-item.active .nav-link {
-  color: #777 !important;
+  color: #7c5f4f !important;
 }
 
 .nav-link {
@@ -154,7 +150,7 @@ body {
   width: 100%;
   height: 2px;
   content: '';
-  background-color: #8167a9;
+  background-color: #685042;
   opacity: 0;
   transition: all 200ms linear;
 }
@@ -606,8 +602,7 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 3px;
   background-position: center center;
   background-size: cover;
-  background-image: url('https://picsum.photos/200/300?grayscale');
-  box-shadow: 0 0 0 2px rgba(12, 12, 12, .1);
+  background-image: url("../images/project_application/logo.png");
   transition: opacity .2s, border-radius .2s, box-shadow .2s;
   transition-timing-function: ease-out;
 }
@@ -615,5 +610,5 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .link-to-portfolio:hover {
   opacity: 0.8;
   border-radius: 50%;
-  box-shadow: 0 0 0 20px rgba(12, 12, 12, .1);
+  box-shadow: 0 0 0 20px rgba(188, 145, 121, .2);
 }

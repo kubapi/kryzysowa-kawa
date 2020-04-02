@@ -6,11 +6,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Zawieszona kawa</title>
+
+  <title>Kryzysowa kawa</title>
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static "project_application/css/style.css" %}?">
+
+  <link rel="icon" href="{% static "project_application/images/project_application/icon.ico" %}">
 
   <!-- Linking owl -->
   <link rel="stylesheet" href="{% static "project_application/external/assets/owl.carousel.min.css" %}?">
@@ -29,7 +33,7 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="{% url "main" %}">
-              <img src="https://picsum.photos/200?grayscale" alt="">
+              <img src="{% static "project_application/images/project_application/logo.png" %}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -81,7 +85,7 @@
   <!-- Center section ends -->
 
   <!-- Bottom-Right -->
-  <a href="mailto:joe@example.com?subject=Kontakt" class="link-to-portfolio"></a>
+  <a href="mailto:kryzysowa-kawa@gmail.com?subject=Kontakt" class="link-to-portfolio"></a>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>

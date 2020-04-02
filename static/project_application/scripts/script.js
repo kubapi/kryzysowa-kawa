@@ -7,10 +7,18 @@ $(document).ready(function() {
   $('#dtBasicExample').DataTable({
     "paging": false, // false to disable pagination (or any other option)
     "info": false,
+    oLanguage: {
+      "sSearch": "Szukaj:",
+    },
+    "placeholder": "what",
+    "order": [],
   });
   $('.dataTables_length').addClass('bs-select');
   console.log("DataTable initilaized!")
+  $('.dataTables_filter input').attr("placeholder", "Cafe Kryzysowa");
+
 });
+
 
 (function($) {
   "use strict";

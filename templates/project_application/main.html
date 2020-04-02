@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 {% extends "project_application/base.html" %}
+
+{% load static %}
+
 {% block body_block %}
 <!-- Insert here -->
-<div class="full-height-one">
+<div class="full-height-one" style="margin: 5vh 0px;">
   <div class="container">
-    <div class="row">
+    <div class="row" style="margin-bottom: 5vh;">
       <div class="col-md-6">
-        <h1>Wesprzyj swoje ulubione miejsca!</h1>
-        <h2>Pomóż im przetrwać w czasie kryzysu</h2>
+        <h1>Wesprzyj swoje ulubione miejsca...</h1>
+        <h2>...i pomóż im przetrwać w czasie kryzysu!</h2>
       </div>
       <div class="col-md-6">
-        <img src="https://picsum.photos/400?grayscale" alt="">
+        <!-- <img src="{% static "project_application/images/project_application/logo.png" %}" alt=""> -->
       </div>
     </div>
 
 
     {% if businesses %}
-    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%" style="margin-top: 5vw;">
+    <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
           <th class="th-sm" scope="col">Nazwa</th>
