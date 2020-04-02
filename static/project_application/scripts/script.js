@@ -5,6 +5,7 @@ $(document).ready(function() {
 
 (function($) {
   "use strict";
+  console.log("JS loaded!");
   $(function() {
     var header = $(".start-style");
     $(window).scroll(function() {
@@ -17,8 +18,6 @@ $(document).ready(function() {
       }
     });
   });
-  console.log("JS loaded!");
-
 
   //Menu On Hover
   $('body').on('mouseenter mouseleave', '.nav-item', function(e) {

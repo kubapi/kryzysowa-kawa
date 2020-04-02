@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from django.http import HttpResponseRedirect
+
 from .forms import NewBusiness, NewNewsletterSubscriber
 from .models import Business
 
@@ -26,7 +28,18 @@ def about(request):
     return render(request, 'project_application/about.html')
 
 def contact(request):
-    return render(request, 'project_application/contact.html')
+    news_form = NewNewsletterSubscriber()
+
+    if request.method == "POST":
+        news_form = NewNewsletterSubscriber(request.POST)
+
+        if news_form.is_valid():
+            news_form.save(commit=True)
+            news_form = NewNewsletterSubscriber()
+            return render(request, "project_application/contact.html", {'news_form':news_form})
+        else:
+            print("Form error!")
+    return render(request, "project_application/contact.html", {'news_form':news_form})
 
 def explore(request):
     return render(request, 'project_application/explore.html')
