@@ -14,6 +14,12 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
 
+.with_bg {
+  background-image: url("../images/project_application/panorama.png");
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(252, 232, 219, 0.5) !important;
 }
@@ -210,10 +216,6 @@ body {
   position: relative;
   width: 100%;
   display: block;
-}
-
-.full-height-one {
-  height: 100vh;
 }
 
 .full-height {
