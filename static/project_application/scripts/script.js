@@ -9,13 +9,14 @@ $(document).ready(function() {
     "info": false,
     oLanguage: {
       "sSearch": "Szukaj:",
+      "sRowEmpty": "Ups! Nie mamy t",
     },
-    "placeholder": "what",
     "order": [],
   });
+  array = ['Cafe Kryzysowa', 'Warszawa', 'Kawiarnia', 'Zniżka'];
   $('.dataTables_length').addClass('bs-select');
   console.log("DataTable initilaized!")
-  $('.dataTables_filter input').attr("placeholder", "Cafe Kryzysowa");
+  $('.dataTables_filter input').attr("placeholder", array[Math.floor(Math.random() * array.length)].toString());
 
 });
 
