@@ -12,6 +12,18 @@ class Business(models.Model):
         ('Kawiarnia', 'Kawiarnia'),
         ('Restauracja', 'Restauracja'),
         ('Bar', 'Bar'),
+        ('Mały biznes', 'Mały biznes'),
+        ('Księgarnia', 'Księgarnia'),
+        ('Sklep z ubraniami', 'Sklep z ubraniami'),
+        ('Sklep plastyczny', 'Sklep plastyczny'),
+        ('Zoo', 'Zoo'),
+        ('Sklep dla zwierząt', 'Sklep dla zwierząt'),
+        ('Piekarnia', 'Piekarnia'),
+        ('Sklep krawiecki', 'Sklep krawiecki'),
+        ('Bazar', 'Bazar'),
+        ('Garmażeria', 'Garmażeria'),
+        ('Bar mleczny', 'Bar mleczny'),
+        ('Kino', 'Kino'),
         ('Inny', 'Inny'),
     )
     type = models.CharField("Kategoria",max_length = 264, choices = AVAILABLE_TYPES)
@@ -19,6 +31,9 @@ class Business(models.Model):
         ('Karta podarunkowa', 'Karta podarunkowa'),
         ('Zniżka', 'Zniżka'),
         ('Zawieszony produkt', 'Zawieszony produkt (np.kawa)'),
+        ('Produkt', 'Produkt'),
+        ('Subskrypcja', 'Subskrypcja'),
+        ('Zakupy online', 'Zakupy online'),
         ('Inna', 'Inna'),
     )
     form = models.CharField("Rodzaj wsparcia",max_length = 264, choices = AVAILABLE_FORMS)
@@ -35,8 +50,8 @@ class NewsletterSubscriber(models.Model):
     class Meta():
         verbose_name_plural = "Newsletter Subscribers"
 
-    email = models.EmailField(unique=True)
-    name = models.CharField(max_length = 264)
+    email = models.EmailField("Email",unique=True)
+    name = models.CharField("Imię",max_length = 264)
     starting_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
