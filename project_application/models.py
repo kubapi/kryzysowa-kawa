@@ -7,23 +7,23 @@ class Business(models.Model):
     class Meta():
         verbose_name_plural = "Businesses"
 
-    name = models.CharField(max_length = 264, unique = True)
+    name = models.CharField("Nazwa",max_length = 264, unique = True)
     AVAILABLE_TYPES = (
         ('Kawiarnia', 'Kawiarnia'),
         ('Restauracja', 'Restauracja'),
         ('Bar', 'Bar'),
         ('Inny', 'Inny'),
     )
-    type = models.CharField(max_length = 264, choices = AVAILABLE_TYPES)
+    type = models.CharField("Kategoria",max_length = 264, choices = AVAILABLE_TYPES)
     AVAILABLE_FORMS = (
         ('Karta podarunkowa', 'Karta podarunkowa'),
         ('Zniżka', 'Zniżka'),
         ('Zawieszony produkt', 'Zawieszony produkt (np.kawa)'),
         ('Inna', 'Inna'),
     )
-    form = models.CharField(max_length = 264, choices = AVAILABLE_FORMS)
-    url = models.URLField(max_length=200)
-    city = models.CharField(max_length = 264)
+    form = models.CharField("Rodzaj wsparcia",max_length = 264, choices = AVAILABLE_FORMS)
+    url = models.URLField("URL",max_length=200)
+    city = models.CharField("Miasto",max_length = 264)
     update_date = models.DateTimeField(auto_now=True)
 
 

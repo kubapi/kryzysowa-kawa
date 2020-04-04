@@ -8,48 +8,53 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 ">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+      <div class="form-title">
+        <h3>Dołącz do nas wypełniając formularz!</h3>
+      </div>
+      <span class="line"></span>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <h2>Zgłoś się</h2>
-      <p><span>Easy to use:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta ipsum eu hendrerit accumsan. Etiam eget varius ex, ac aliquet dolor. </p>
-      <p><span>Simple Onboarding:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta ipsum eu hendrerit accumsan. </p>
-      <p><span>Advanced Features:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="left-text">
+        <p><span>Łatwe w użyciu:</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p><span>Darmowe:</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span>Wybór:</span> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="">
       <div class="call">
-        Zgłoś się poniżej żeby inni mogli zobaczyć twój bizens albo napisz do nas na maila <span><a href="mailto:kryzysowa-kawa@gmail.com?subject=Zgłoszenie">kryzysowa-kawa@gmail.com</a></span>
+        <p>Zgłoś się poniżej żeby inni mogli zobaczyć twój bizens lub napisz do nas na maila: <span><a href="mailto:kryzysowa-kawa@gmail.com?subject=Zgłoszenie">kryzysowa-kawa@gmail.com</a></span></p>
       </div>
 
-      <form method="POST">
+      <form class="form" method="POST">
         {% csrf_token %}
         <div class="row">
-          <div class="col-6">
+          <div class="box col-6">
             {{ form.name|as_crispy_field }}
           </div>
-          <div class="col-6">
-            {{ form.type|as_crispy_field }}
+          <div class="box col-6">
+            {{ form.city|as_crispy_field }}
           </div>
         </div>
         <div class="row">
-          <div class="col 12">
+          <div class="box col 12">
             {{ form.url|as_crispy_field }}
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="box col-6">
             {{ form.form|as_crispy_field }}
           </div>
-          <div class="col-6">
-            {{ form.city|as_crispy_field }}
+          <div class="box col-6">
+            {{ form.type|as_crispy_field }}
           </div>
         </div>
-        <input type="submit" class="btn btn-success" name="" value="Submit">
+        <input type="submit" class="btn my-btn" name="" value="Zgłoś">
       </form>
+
     </div>
   </div>
+  <div class="bg"></div>
 </div>
 {% endblock %}
