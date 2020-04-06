@@ -17,32 +17,36 @@
       </div>
     </div>
 
-
-    {% if businesses %}
-    <table id="dtBasicExample" class="table  table-striped " cellspacing="0" width="100%">
-      <thead>
-        <tr>
-          <th class="th-sm" scope="col">Nazwa</th>
-          <th class="th-sm" scope="col">Kategoria</th>
-          <th class="hideseek1 th-sm" scope="col">Rodzaj wsparcia</th>
-          <th class="hideseek2 th-sm" scope="col">Miasto</th>
-          <th class="hideseek3 th-sm" scope="col">Data aktualizacji</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for business in businesses %}
-        <tr>
-          <td><a href="{{ business.url }}">{{business.name}}</a></td>
-          <td><a href="{{ business.url }}">{{business.type}}</a></td>
-          <td class="hideseek1"><a href="{{ business.url }}">{{business.form}}</a></td>
-          <td class="hideseek2"><a href="{{ business.url }}">{{business.city}}</a></td>
-          <td class="hideseek3"><a href="{{ business.url }}">{{business.update_date}}</a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% endif %}
-
+    <div class="row">
+      <div class="col-md-12">
+        {% if businesses %}
+        <table id="dtBasicExample" class="table  table-striped " cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="th-sm" scope="col">Nazwa</th>
+              <th class="th-sm" scope="col">Kategoria</th>
+              <th class="hideseek1 th-sm" scope="col">Rodzaj wsparcia</th>
+              <th class="hideseek2 th-sm" scope="col">Miasto</th>
+              <th class="hideseek3 th-sm" scope="col">Data aktualizacji</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for business in businesses %}
+            {% if business.check %}
+            <tr>
+              <td><a href="{{ business.url }}">{{business.name}}</a></td>
+              <td><a href="{{ business.url }}">{{business.type}}</a></td>
+              <td class="hideseek1"><a href="{{ business.url }}">{{business.form}}</a></td>
+              <td class="hideseek2"><a href="{{ business.url }}">{{business.city}}</a></td>
+              <td class="hideseek3"><a href="{{ business.url }}">{{business.update_date}}</a></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 {% endblock %}

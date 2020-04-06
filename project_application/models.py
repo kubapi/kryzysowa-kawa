@@ -40,7 +40,7 @@ class Business(models.Model):
     url = models.URLField("URL",max_length=200)
     city = models.CharField("Miasto",max_length = 264)
     update_date = models.DateTimeField(auto_now=True)
-
+    check = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

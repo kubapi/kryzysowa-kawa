@@ -117,6 +117,14 @@ html {
   letter-spacing: 2px;
 }
 
+::selection {
+  background-color: rgb(252, 232, 219) !important;
+}
+
+#dtBasicExample_filter {
+  text-align: right !important;
+}
+
 .left-text p, .contact p {
   text-align: justify;
   padding-top: 0.6rem;

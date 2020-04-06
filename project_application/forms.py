@@ -17,7 +17,7 @@ class NewBusiness(forms.ModelForm):
 
     class Meta():
         model = Business
-        exclude = ('update_date',)
+        exclude = ('update_date','check')
 
         widgets = {
             'url':TextInput(),

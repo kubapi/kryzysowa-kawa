@@ -79,15 +79,7 @@ div.dataTables_wrapper div {
 }
 
 @media (max-width: 767px) {
-  div.dataTables_wrapper div {
-    .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate ul.pagination {
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      text-align: center;
-      -webkit-box-pack: center;
-    }
-  }
+
 }
 
 .bs-select select {
