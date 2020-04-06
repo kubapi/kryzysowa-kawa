@@ -12,7 +12,7 @@
       <!-- Start col -->
       <div class="col-md-2">
       </div>
-      <div class="col-md-6">
+      <div class="pad col-md-6">
         <div class="contact">
           <p>Skontaktuj się z nami w przypadku jakichkolwiek pytań. Czy masz firmę lub link, który możemy dodać? Wyślij do nas <a href="mailto:kryzysowa-kawa@gmail.com?subject=Kontakt" style="font-weight: 600;">email</a> i daj nam znać.
             <i>#jesteśmyrazem</i> <i>#zostanwdomu</i></p>
@@ -20,7 +20,7 @@
           <div class="newsletter">
             <p>Jeśli chcesz być nabieżąco ze statystykami i naszymi działaniami zasubskrybuj nasz newsletter!</p>
 
-            <form method="POST">
+            <form class="form2" method="POST">
               {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <!-- End col -->
-      <div class="col-md-2">
+      <div class="tocenter col-md-2">
         <img class="cup" src="{% static "project_application/images/project_application/kontakt.png" %}" alt="">
       </div>
       <div class="col-md-2">
