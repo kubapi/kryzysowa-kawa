@@ -18,6 +18,26 @@ html {
   overflow-y: scroll !important;
 }
 
+.imp1-h1 {
+  letter-spacing: 1.5px !important;
+  line-height: 1.2;
+  padding-top: 6vh;
+  padding-bottom: 4vh;
+  font-size: xx-large;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+.imp2-h1 {
+  letter-spacing: 1.5px !important;
+  padding-top: 6vh;
+  padding-bottom: 4vh;
+  line-height: 1.2;
+  font-size: xx-large;
+  font-weight: 600 !important;
+  text-align: right;
+}
+
 .about {
   text-align: justify !important;
   line-height: 1.7;
@@ -685,6 +705,10 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .hideseek3 {
     display: none;
   }
+
+  .link-to-portfolio {
+    display: none;
+  }
 }
 
 @media (max-width: 425px) {
@@ -694,6 +718,16 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 @media (max-width: 767px) {
+  .imp2-h1 {
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+  }
+
+  .imp1-h1 {
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+  }
+
   table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
     right: 0;
   }
