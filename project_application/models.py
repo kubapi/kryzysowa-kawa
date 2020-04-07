@@ -11,6 +11,7 @@ class Business(models.Model):
     AVAILABLE_TYPES = (
         ('Kawiarnia', 'Kawiarnia'),
         ('Restauracja', 'Restauracja'),
+        ('Cukiernia', 'Cukiernia'),
         ('Bar', 'Bar'),
         ('Mały biznes', 'Mały biznes'),
         ('Księgarnia', 'Księgarnia'),
@@ -28,11 +29,13 @@ class Business(models.Model):
     )
     type = models.CharField("Kategoria",max_length = 264, choices = AVAILABLE_TYPES)
     AVAILABLE_FORMS = (
+        ('Zbiórka', 'Zbiórka'),
+        ('Voucher', 'Voucher'),
+        ('Zajęcia', 'Zajęcia (kulinarne, rzemieślnicze...)'),
         ('Karta podarunkowa', 'Karta podarunkowa'),
-        ('Zniżka', 'Zniżka'),
-        ('Zawieszony produkt', 'Zawieszony produkt (np.kawa)'),
-        ('Produkt', 'Produkt'),
-        ('Subskrypcja', 'Subskrypcja'),
+        ('Wynajęcie food trucka', 'Wynajęcie food trucka'),
+        ('Bony rabatowe', 'Bony rabatowe (zniżka)'),
+        ('Zawieszony produkt', 'Zawieszony produkt (do odebrania po otwarciu)'),
         ('Zakupy online', 'Zakupy online'),
         ('Inna', 'Inna'),
     )
