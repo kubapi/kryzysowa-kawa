@@ -13,7 +13,7 @@ class Business(models.Model):
         ('Restauracja', 'Restauracja'),
         ('Cukiernia', 'Cukiernia'),
         ('Bar', 'Bar'),
-        ('Mały biznes', 'Mały biznes'),
+        ('Lokalny biznes', 'Lokalny biznes'),
         ('Księgarnia', 'Księgarnia'),
         ('Sklep z ubraniami', 'Sklep z ubraniami'),
         ('Sklep plastyczny', 'Sklep plastyczny'),
@@ -24,7 +24,9 @@ class Business(models.Model):
         ('Bazar', 'Bazar'),
         ('Garmażeria', 'Garmażeria'),
         ('Bar mleczny', 'Bar mleczny'),
+        ('Salon', 'Salon'),
         ('Kino', 'Kino'),
+        ('Klub', 'Klub'),
         ('Inny', 'Inny'),
     )
     type = models.CharField("Kategoria",max_length = 264, choices = AVAILABLE_TYPES)
