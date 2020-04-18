@@ -5,9 +5,11 @@ from django.http import HttpResponseRedirect
 from .forms import NewBusiness, NewNewsletterSubscriber
 from .models import Business
 
+from random import shuffle
+
 # Create your views here.
 def main(request):
-    businesses_list = Business.objects.order_by('update_date')
+    businesses_list = Business.objects.order_by('?')
     businesses_dict = {'businesses':businesses_list}
     return render(request, "project_application/main.html",context=businesses_dict)
 

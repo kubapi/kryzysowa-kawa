@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $(".owl-carousel").owlCarousel();
   console.log("Owl loaded!");
 });

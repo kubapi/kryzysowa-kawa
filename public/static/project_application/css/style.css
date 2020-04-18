@@ -31,11 +31,10 @@ html {
 .imp2-h1 {
   letter-spacing: 1.5px !important;
   padding-top: 6vh;
-  padding-bottom: 4vh;
   line-height: 1.2;
   font-size: xx-large;
   font-weight: 600 !important;
-  text-align: right;
+  text-align: left;
 }
 
 .about {
@@ -146,7 +145,7 @@ html {
 }
 
 .left-text p, .contact p {
-  text-align: justify;
+  text-align: left;
   padding-top: 0.6rem;
   padding-bottom: 15px;
   letter-spacing: 0.3px;
