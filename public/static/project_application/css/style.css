@@ -144,6 +144,11 @@ html {
   text-align: right !important;
 }
 
+label {
+  padding-top: 0 !important;
+  margin-top: 2.4em !important;
+}
+
 .left-text p, .contact p {
   text-align: left;
   padding-top: 0.6rem;

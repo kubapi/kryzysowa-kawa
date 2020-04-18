@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
   $(".owl-carousel").owlCarousel();
-  console.log("Owl loaded!");
+  // console.log("Owl loaded!");
 });
 
 $(document).ready(function() {
+
+
   $('#dtBasicExample').DataTable({
     "paging": false, // false to disable pagination (or any other option)
     "info": false,
@@ -16,7 +18,8 @@ $(document).ready(function() {
   });
   array = ['Cafe Kryzysowa', 'Warszawa', 'Kawiarnia', 'Zniżka'];
   $('.dataTables_length').addClass('bs-select');
-  console.log("DataTable initilaized!")
+
+  // console.log("DataTable initilaized!")
   $('.dataTables_filter input').attr("placeholder", array[Math.floor(Math.random() * array.length)].toString());
 
 });
@@ -24,7 +27,7 @@ $(document).ready(function() {
 
 (function($) {
   "use strict";
-  console.log("JS loaded!");
+  // console.log("JS loaded!");
   $(function() {
     var header = $(".start-style");
     $(window).scroll(function() {
@@ -48,5 +51,7 @@ $(document).ready(function() {
       }, 1);
     }
   });
+
+
 
 })(jQuery);

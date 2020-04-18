@@ -91,7 +91,14 @@
 
   <!-- MDBootstrap Datatables  -->
   <script src="{% static "project_application/external/mdb/js/addons/datatables.min.js" %}"></script>
-
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".col-sm-12").first().append(
+        "<p style='padding-left: 0.75em;font-weight: bolder; text-align:left !important;'>Firmy, które porzebują wsparcia 👇🏻</p><p style='text-align:left !important; padding-left: 0.75em;'>Kliknij w nazwę firmy i sprawdzić jak możesz pomóc!</p>"
+      )
+      console.log("Wow!")
+    })
+  </script>
 </body>
 
 </html>
