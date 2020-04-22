@@ -13,9 +13,11 @@ def main(request):
     businesses_dict = {'businesses':businesses_list}
     return render(request, "project_application/main.html",context=businesses_dict)
 
+def wspierampl(request):
+    return render(request, "project_application/wspierampl.html")
+
 def businesses(request):
     form = NewBusiness()
-
     if request.method == "POST":
         form = NewBusiness(request.POST)
 

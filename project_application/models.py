@@ -27,6 +27,8 @@ class Business(models.Model):
         ('Salon', 'Salon'),
         ('Kino', 'Kino'),
         ('Klub', 'Klub'),
+        ('Teatr', 'Teatr'),
+        ('Sklep odzieżowy (Moda)', 'Sklep odzieżowy (Moda)'),
         ('Inny', 'Inny'),
     )
     type = models.CharField("Kategoria",max_length = 264, choices = AVAILABLE_TYPES)
@@ -46,7 +48,7 @@ class Business(models.Model):
     city = models.CharField("Miasto",max_length = 264)
     update_date = models.DateTimeField(auto_now=True)
     check = models.BooleanField(default=False)
-
+    
     def __str__(self):
         return self.name
 

@@ -12,8 +12,8 @@
         <img style="height: 79%; width: 70%; max-height: 300px; max-width: 300px; margin-top: 4vh; margin-bottom: 4vh;" src="{% static "project_application/images/project_application/kawiarenka.png" %}" alt="">
       </div>
       <div class="col-md-6">
-        <h1 class="imp2-h1">Wesprzyj swoje ulubione miejsca i pomóż im przetrwać kryzys!</h1>
-        <p style="text-align: left !important; line-height: 1.6;">
+        <h1 class="imp2-h1">Wesprzyj swoje ulubione miejsca i pomóż im przetrwać pandemię!</h1>
+        <p class="addtext" style="text-align: left; line-height: 1.6;">
           Jesteśmy grupą tegorocznych maturzystów, którzy zaniepokojeni sytuacją polskich firm postanowili wziąć sprawy w swoje ręce. Kryzysowa kawa to strona, na której chcemy zgromadzić firmy potrzebujące wsparcia i ludzi, którzy są gotowi im
           pomóc.
         </p>
@@ -29,7 +29,7 @@
               <th class="th-sm" scope="col">Nazwa</th>
               <th class="th-sm" scope="col">Kategoria</th>
               <th class="hideseek1 th-sm" scope="col">Rodzaj wsparcia</th>
-              <th class="hideseek2 th-sm" scope="col">Miasto</th>
+              <th class="hideseek3 th-sm" scope="col">Miasto</th>
               <!-- <th class="hideseek3 th-sm" scope="col">Data aktualizacji</th> -->
             </tr>
           </thead>
@@ -40,7 +40,7 @@
               <td><a href="{{ business.url }}">{{business.name}}</a></td>
               <td><a href="{{ business.url }}">{{business.type}}</a></td>
               <td class="hideseek1"><a href="{{ business.url }}">{{business.form}}</a></td>
-              <td class="hideseek2"><a href="{{ business.url }}">{{business.city}}</a></td>
+              <td class="hideseek3"><a href="{{ business.url }}">{{business.city}}</a></td>
               <!-- <td class="hideseek3"><a href="{{ business.url }}">{{business.update_date}}</a></td> -->
             </tr>
             {% endif %}
